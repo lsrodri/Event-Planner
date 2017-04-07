@@ -21,14 +21,16 @@ eventPlannerApp.factory('facebookService', function($window, $q) {
             return deferred.promise;
         },
         getEvent: function(token, id) {
+          var deferred = $q.defer();
           FB.api(
             '/' + id,
             'GET',
             {"accessToken":token},
             function(response) {
-                // Insert your code here
+                deferred.resolve(response);
             }
           );
+          return deferred.promise;
         }
     }
 });

@@ -1,23 +1,21 @@
 <ng-include src="'partials/Header.html'" ng-controller="headerCtrl"></ng-include>
 <ng-include src="'partials/Sidebar.html'" ng-controller="sidebarCtrl"></ng-include>
 
-<div id="ShowEvents">
-    <div id="Loading" class="load">
+<div id="ShowEvents" class="col-sm-9">
+    <div id="Loading" class="load" ng-show="loading">
         <div class="container-fluid">
             <div class="row">
                  <p>Loading...</p>
             </div>
         </div>
     </div>
-    <div id="mainShowEvents">
+    <div id="mainShowEvents" ng-show="!loading">
         <div class="container-fluid">
-            <div class="row">
-                <h2>Gallery</h2>
-                <div id="eventGallery">
-                    <img id="eventPic" src="">Pic
-                    <h5 id="eventName">{{eventName}}</h5>
-                    <p id="eventType">{{eventType}}</p>
-                </div>
+            <div id="eventGallery">
+                <img id="eventPic" ng-src="{{event.cover}}">
+                <h5 id="eventName">{{event.name}}</h5>
+                <p id="eventType">{{event.category}}</p>
+                <p>{{event.description}}</p>
             </div>
         </div>
     </div>    
