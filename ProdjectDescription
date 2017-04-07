@@ -1,0 +1,17 @@
+Kungliga Tekniska Högskolan (KTH)
+Interaction Programming and the Dynamic Web (DH2642)
+Project Description 
+Group 11: Linn Eliassen Lundahl, Magdalena Okurowska, Lucas Rodrigues 
+
+The webpage intends to display location-based Facebook event data that should be available at the Facebook Graph API. However, in order to browse that data, it is going to use a Node.js library named "facebook-events-by-location-core". NoSQL mobile service is also used as well as Firebase in order to store user data.
+
+This project is developed using JavaScript and HTML languages and makes use of the framework Angular.js. The project consist of several particles of the same model and thereby displaying the different events which are happening in the city in real time. This events can the user save in a list or calendar. Events can be added and removed. 
+
+Interactions and changes on the model data are achieved throughout the option of saving the list of events or adding it in a calendar. Furthermore is the webpage responsive to ensure that users can use it on the go. The user will in the end have the option of sending the event list to oneself throughout email or printing the event or list.
+
+
+
+
+
+
+

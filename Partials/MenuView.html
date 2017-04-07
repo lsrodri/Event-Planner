@@ -1,0 +1,49 @@
+<!--<ng-include src="'partials/MenuView.html'" ng-controller="menuView"></ng-include>-->
+
+    <div id="MenuView" >
+        <div class="container-fluid" >
+            <div  class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3">
+                        <form id="searchValues" class="form-control" align="left">
+                            <input id="searchMotor" placeholder="SEARCH FOR EVENTS"></input>
+                            <button id="searchBtn" class="btn btn-info" >SEARCH </button>
+                        </form>  
+                    </div>
+                    <div>
+                        <label for="Date">Choose Date :</label><input id="Date" type="date" value="2011-01-13"/>
+                    </div>
+
+
+                    <div class="col-md-3">
+                         <select  id="chooseDay" class="form-control" style="width: 200px">
+                            <option value='monday'> Monday </option>
+                            <option value='tuseday'> Tuesday </option>
+                            <option value='wensday'> Wensday </option>
+                            <option value='thursday'> Thursday </option>
+                            <option value='friday'> Friday </option>
+                            <option value='saturday'> Saturday </option>
+                            <option value='sunday'> Sunday </option>
+                        </select> 
+                    </div>
+                    <div class="col-md-3" >
+                        <select  id="chooseArea" value="distance" class="form-control" style="width: 200px">
+                            <option value='center=59.336684,18.085292&distance=1000'> Ostermalm </option>
+                            <option value='center=59.334634,18.060526&distance=2000'> Norrmalm </option>
+                            <option value='center=59.344233,18.045621&distance=2000'> Vasastand </option>
+                            <option value='center=59.312527,18.061619&distance=5000'> Sodermalm </option>
+                            <option value='center=59.331181,18.040736&distance=3000'> Kungsholmen </option>
+                            <option value='center=59.325698,18.071879&distance=900' > Gamla Stan </option>
+                        </select> 
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+
+
+

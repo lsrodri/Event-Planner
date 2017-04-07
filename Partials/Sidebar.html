@@ -1,0 +1,21 @@
+
+<ng-include src="'partials/Sidebar.html'" ng-controller="sidebarCtrl"></ng-include>
+
+<div id="Sidebar">
+        <div class="container-fluid">
+            <div class="row">
+                <h1> EVENT LIST</h1>
+            </div>
+            
+            <table id="showEventList">
+                <tr>
+                  <th id="weekday">{{weekday}}</th>
+                </tr>
+                <tr>
+                    <th id="event">{{eventName}}</th>
+                </tr>
+            </table>
+
+            <button id="printELBtn" class="btn btn-info"> Print</button>
+        </div>
+    </div> 

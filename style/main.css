@@ -1,0 +1,52 @@
+body {
+	background: url("../Images/bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1{
+	color: black;
+	text-align: center; 
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 85px; 
+	padding-top: 2%;
+    text-shadow: 2px 2px #2F4F4F;
+}
+
+p{
+	text-align: center;
+	font-family: Noteworthy;
+	font-weight: lighter;
+	font-size: 35px; 
+	padding-bottom: 3%; 
+	text-shadow: 2px 2px #2F4F4F;
+}
+
+.form-control{
+	font-family: Noteworthy; 
+	font-weight: lighter;
+	font-size: 10px; 
+	background-color: green; 
+}
+
+.login-container {
+    margin: 20% auto 0;
+    max-width: 360px;
+    min-height: 300px;
+}
+
+.facebook-login {
+    background-color: #3b5998;
+    border-color: white;
+}
+
+#HeaderView{
+	background-image: url("../Images/d6bdd9f4b1674af24dd3085e344987bb.png");
+	background-repeat: repeat;
+	background-origin: border-box;
+	opacity: 0.5;
+    filter: alpha(opacity=50)
+}
