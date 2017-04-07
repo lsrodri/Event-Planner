@@ -1,4 +1,7 @@
-<div class="events-list col-xs-12">
+<ng-include src="'partials/Header.html'" ng-controller="headerCtrl"></ng-include>
+<ng-include src="'partials/Sidebar.html'" ng-controller="sidebarCtrl"></ng-include>
+
+<div class="events-list col-xs-9">
 	<div class="col-xs-12 event-item" ng-repeat="event in events.events">
 		<div class="col-xs-2 event-picture">
 			<img ng-src="{{event.profilePicture}}" alt="{{event.name}}">
