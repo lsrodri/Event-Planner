@@ -19,6 +19,16 @@ eventPlannerApp.factory('facebookService', function($window, $q) {
                 }
             });
             return deferred.promise;
+        },
+        getEvent: function(token, id) {
+          FB.api(
+            '/' + id,
+            'GET',
+            {"accessToken":token},
+            function(response) {
+                // Insert your code here
+            }
+          );
         }
     }
 });

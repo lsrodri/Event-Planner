@@ -38,11 +38,14 @@ p{
 }
 
 #HeaderView{
-	background-image: url("../Images/d6bdd9f4b1674af24dd3085e344987bb.png");
+	background-color: rgba(0,0,0,0.6);
 	background-repeat: repeat;
 	background-origin: border-box;
-	opacity: 0.5;
-    filter: alpha(opacity=50)
+}
+
+#HeaderView{
+	color: #fff;
+	font-size: 20px;
 }
 
 .event-picture {

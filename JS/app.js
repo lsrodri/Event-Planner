@@ -15,11 +15,11 @@ eventPlannerApp.config(['$routeProvider',
         templateUrl: 'Partials/Login.html',
         controller: 'loginCtrl'
       }).
-      when('/MenuView', {
+      when('/MenuView/', {
         templateUrl: 'Partials/MenuView.html',
         controller: 'menuViewCtrl'
       }).
-      when('/ShowEvent',{
+      when('/ShowEvent/:eventId',{
          templateUrl: 'Partials/ShowEvent.html',
          controller: 'showEventCtrl'
       }).
