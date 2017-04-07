@@ -4,7 +4,8 @@ eventPlannerApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/Home', {
-        templateUrl: 'Partials/home.html'
+        templateUrl: 'Partials/home.html',
+        controller: 'homeCtrl'
       }).
       when('/Event', {
         templateUrl: 'Partials/Event.html',
@@ -43,12 +44,3 @@ var config = {
 firebase.initializeApp(config);
 
 var provider = new firebase.auth.FacebookAuthProvider();
-
-firebase.auth().getRedirectResult().then(function(result) {
-  if (!result.credential) {
-    window.location.hash = "#!/Login";
-  }  
-}).catch(function(error) {
-  console.log(error.code + error.message + error.email + error.credential);
-  window.location.hash = "#!/Login";
-});
