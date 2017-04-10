@@ -1,4 +1,4 @@
-eventPlannerApp.controller('headerCtrl', function ($scope,$routeParams,Events) {
+eventPlannerApp.controller('headerCtrl', function ($scope,$routeParams) {
 
 
 }); 
