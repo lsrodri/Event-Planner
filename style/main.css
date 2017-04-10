@@ -1,82 +1,161 @@
 body {
-	background: url("../Images/bg.jpg") no-repeat center center fixed;
+    background: url("../Images/a.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
-
+ 
 h1{
-	color: black;
-	text-align: center; 
-	font-family: Arial;
-	font-weight: bold;
-	font-size: 85px; 
-	padding-top: 2%;
+    color: black;
+    text-align: center; 
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 85px; 
+    padding-top: 2%;
     text-shadow: 2px 2px #2F4F4F;
 }
-
+ 
+h4{
+    text-transform: uppercase;
+    font-family: Arial;
+    text-decoration:  #2F4F4F;
+    font-style: lighter; 
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+ 
 p{
-	text-align: center;
-	font-weight: lighter;
-	font-size: 35px; 
-	padding-bottom: 3%; 
-	text-shadow: 2px 2px #2F4F4F;
+    font-family: Arial;
+    font-style: lighter; 
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 15px; 
 }
-
+ 
+ 
+#eventList{
+    color: white;
+    margin-top: 30px; 
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(0,0,0,0.6);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+ 
+#responsBox{
+    color: white;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(0,0,0,0.6);
+    background-repeat: no-repeat;
+    border-top-right-radius: 3em;
+    border-top-left-radius: 3em;
+    border-bottom-right-radius: 3em;
+    border-bottom-left-radius: 3em;
+ 
+}
+ 
+.btn-info{
+    background-color: #2F4F4F; 
+    text-align: center;
+    position: center;
+    color: white;
+    background-color: rgb(56,60,70);
+    border-color: rgb(56,60,70);
+}
+ 
+.btn-info:hover{
+    background-color: rgb(100,100,100);
+    border-color: rgb(100,100,100);
+}
+ 
+#mailBtb{
+    margin-left: 25%; 
+    margin-right: 25%;
+}
+ 
+#printELBtn{
+ margin-right: 40%;
+ margin-left: 35%;
+}
+ 
+#singelEvent{
+ 
+}
+ 
 .form-control{
-	font-weight: lighter;
-	font-size: 11px;
-	background-color: rgba(255,255,255,0.7); 
+    font-weight: lighter;
+    font-size: 11px;
+    background-color: rgba(255,255,255,0.7); 
 }
-
+ 
 .facebook-login {
     background-color: #3b5998;
     border-color: white;
 }
-
+ 
 #HeaderView {
-	background-color: rgba(0,0,0,0.6);
-	background-repeat: repeat;
-	background-origin: border-box;
+    background-color: rgba(0,0,0,0.6);
+    background-repeat: repeat;
+    background-origin: border-box;
 }
-
+ 
 #HeaderView{
-	color: #fff;
-	font-size: 20px;
-	padding: 15px 0;
+    color: #fff;
+    font-size: 20px;
+    padding: 15px 0;
 }
-
+ 
 .event-picture {
-	padding: 0;
+    padding: 0;
 }
-
+ 
 .event-item {
-	background-color: #000;
-	background-color: rgba(0,0,0,0.5);	
-	margin: 1rem 0;	
-	color: #fff;
-	padding: 0;
+    background-color: #000;
+    background-color: rgba(0,0,0,0.5);  
+    margin: 1rem 0; 
+    color: #fff;
+    padding: 0;
 }
-
+ 
 .event-item a {
-	padding: 0 1rem;
-	color: white;
+    padding: 0 1rem;
+    color: white;
 }
-
+ 
 .logo h4 {
-	text-transform: uppercase;
-	font-size: 38px;
-	text-align: center;
-	margin: 20px;
-	font-weight: bold;
+    text-transform: uppercase;
+    font-size: 38px;
+    text-align: center;
+    margin: 20px;
+    font-weight: bold;
+    font-weight: bold; 
 }
-
+ 
 .login-container {
-	background-color: #fff;
-	background-color: rgba(255,255,255,0.5);
-	border-radius: 10px;
-	margin: 20% auto 0;
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 10px;
+    margin: 20% auto 0;
     max-width: 360px;
     min-height: 150px;
+}
+
+output {
+	display: inline;
+}
+
+.event-filter, #Sidebar .container-fluid {
+	background-color: white;
+	background-color: rgba(255,255,255,0.5);
+	padding: 15px 0;
+	margin-top: 15px;
 }
