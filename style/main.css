@@ -139,6 +139,7 @@ p{
     border-bottom-left-radius: 2em;
     border-top-right-radius: 2em;
     border-bottom-right-radius: 2em;
+    margin-left: 230px;
 }
  
 #mailBtb{
@@ -150,10 +151,7 @@ p{
  margin-right: 40%;
  margin-left: 35%;
 }
- 
-#singelEvent{
- 
-}
+
  
 .form-control{
     font-weight: lighter;
@@ -255,9 +253,8 @@ output {
     font-family: Helvetica;
     font-weight: lighter;
     text-transform: uppercase;
-	background-color: rgba(0,0,0,0.6); 
-	
-	margin-top: 30px;
+	  background-color: rgba(0,0,0,0.6); 
+	  margin-top: 30px;
     padding: 15px 0;
 }
 
