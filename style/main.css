@@ -1,10 +1,16 @@
 body {
+<<<<<<< HEAD
+    background: url("../Images/a.jpg") no-repeat center center fixed;
+=======
     background: url("../Images/a.jpg") no-repeat center fixed;
+>>>>>>> master
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+<<<<<<< HEAD
+=======
 
 #headerH{
     margin-left: 3px;
@@ -18,12 +24,18 @@ body {
     font-size: 20px;
     padding-right: 10px;
 }
+>>>>>>> master
  
 h1{
     color: black;
     text-align: center; 
+<<<<<<< HEAD
+    font-family: Arial;
+    font-weight: bold;
+=======
     font-family: Helvetica;
     font-weight: lighter;
+>>>>>>> master
     font-size: 85px; 
     padding-top: 2%;
     text-shadow: 2px 2px #2F4F4F;
@@ -31,20 +43,76 @@ h1{
  
 h4{
     text-transform: uppercase;
+<<<<<<< HEAD
+    font-family: Arial;
+    text-decoration:  #2F4F4F;
+    font-style: lighter; 
+    font-size: 30px;
+=======
     font-family: Helvetica;
     text-decoration:  #2F4F4F;
     font-weight: lighter; 
     font-size: 20px;
+>>>>>>> master
     text-align: center;
     padding-bottom: 15px;
 }
  
 p{
+<<<<<<< HEAD
+    font-family: Arial;
+=======
     font-family: Helvetica;
+>>>>>>> master
     font-style: lighter; 
     text-transform: uppercase;
     text-align: center;
     font-size: 15px; 
+<<<<<<< HEAD
+}
+ 
+ 
+#eventList{
+    color: white;
+    margin-top: 30px; 
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(0,0,0,0.6);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+ 
+#responsBox{
+    color: white;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(0,0,0,0.6);
+    background-repeat: no-repeat;
+    border-top-right-radius: 3em;
+    border-top-left-radius: 3em;
+    border-bottom-right-radius: 3em;
+    border-bottom-left-radius: 3em;
+ 
+}
+ 
+.btn-info{
+    background-color: #2F4F4F; 
+    text-align: center;
+    position: center;
+    color: white;
+    background-color: rgb(56,60,70);
+    border-color: rgb(56,60,70);
+}
+ 
+.btn-info:hover{
+    background-color: rgb(100,100,100);
+    border-color: rgb(100,100,100);
+=======
 }
  
 #eventList{
@@ -89,6 +157,7 @@ p{
 
 #removeBtn{
     background-color: #4d0000;
+>>>>>>> master
 }
  
 #mailBtb{
@@ -99,6 +168,19 @@ p{
 #printELBtn{
  margin-right: 40%;
  margin-left: 35%;
+<<<<<<< HEAD
+}
+ 
+#singelEvent{
+ 
+}
+ 
+.form-control{
+    font-weight: lighter;
+    font-size: 11px;
+    background-color: rgba(255,255,255,0.7); 
+}
+=======
 }
 
 #mailIcon{
@@ -119,6 +201,7 @@ p{
     font-size: 11px;
     background-color: rgba(255,255,255,0.7); 
 }
+>>>>>>> master
  
 .facebook-login {
     background-color: #3b5998;
@@ -126,12 +209,23 @@ p{
 }
  
 #HeaderView {
+<<<<<<< HEAD
+    background-color: rgba(0,0,0,0.6);
+    background-repeat: repeat;
+    background-origin: border-box;
+}
+ 
+#HeaderView{
+    color: #fff;
+    font-size: 20px;
+=======
     background-color: rgba(0,0,0,0.8);
     background-repeat: repeat;
     background-origin: border-box;
 
     color: #fff;
     font-size: 0px;
+>>>>>>> master
     padding: 15px 0;
 }
  
@@ -141,7 +235,11 @@ p{
  
 .event-item {
     background-color: #000;
+<<<<<<< HEAD
+    background-color: rgba(0,0,0,0.5);  
+=======
     background-color: rgba(0,0,0,0.6);  
+>>>>>>> master
     margin: 1rem 0; 
     color: #fff;
     padding: 0;
@@ -157,6 +255,11 @@ p{
     font-size: 38px;
     text-align: center;
     margin: 20px;
+<<<<<<< HEAD
+    font-weight: bold;
+    font-weight: bold; 
+=======
+>>>>>>> master
 }
  
 .login-container {
@@ -172,6 +275,13 @@ output {
 	display: inline;
 }
 
+<<<<<<< HEAD
+.event-filter, #Sidebar .container-fluid {
+	background-color: white;
+	background-color: rgba(255,255,255,0.5);
+	padding: 15px 0;
+	margin-top: 15px;
+=======
 .event-filter{
     color: lightgrey;
     font-family: Helvetica;
@@ -181,4 +291,5 @@ output {
 	
 	margin-top: 30px;
     padding: 15px 0;
+>>>>>>> master
 }
