@@ -1,4 +1,4 @@
-var eventPlannerApp = angular.module('eventPlanner', ['ngRoute','ngResource']);
+var eventPlannerApp = angular.module('eventPlanner', ['ngRoute','ngResource', 'firebase']);
 
 eventPlannerApp.config(['$routeProvider',
   function($routeProvider) {
@@ -38,7 +38,8 @@ var config = {
   authDomain: "events-394dd.firebaseapp.com",
   databaseURL: "https://events-394dd.firebaseio.com",
   storageBucket: "events-394dd.appspot.com",
-  messagingSenderId: "1034358825975"
+  messagingSenderId: "1034358825975",
+  projectId: "events-394dd"
 };
 
 firebase.initializeApp(config);
