@@ -1,18 +1,29 @@
 <div id="Sidebar" class="col-sm-3">
-        <div class="container-fluid">
-            <div class="row">
-                <h4>My events</h4>
-            </div>
-            
-            <table id="showEventList">
-                <tr>
-                  <th id="weekday">{{weekday}}</th>
-                </tr>
-                <tr>
-                    <th id="event">{{eventName}}</th>
-                </tr>
-            </table>
-
-            <button id="printELBtn" class="btn btn-info"> Print</button>
+    <div class="container-fluid">
+        <div class="row">
+            <h4>My events</h4>
         </div>
-    </div> 
+        <div class="col-xs-12 my-events-item" ng-repeat="event in events">
+            <div class="col-xs-3">
+                <img ng-src="{{event.eventImage}}" alt="{{event.eventName}}">
+            </div>
+            <div class="col-xs-9">
+                <div>{{event.eventDate | date:'dd/MM/yyyy - HH:mm':"+0200"}}</div>
+                <div>
+                    <a ng-href="#!/ShowEvent/{{event.eventId}}">{{event.eventName}}</a>
+                </div>
+            </div>
+        </div>
+
+        <table id="showEventList">
+            <tr>
+              <th id="weekday">{{weekday}}</th>
+            </tr>
+            <tr>
+                <th id="event">{{eventName}}</th>
+            </tr>
+        </table>
+
+        <button id="printELBtn" class="btn btn-info"> Print</button>
+    </div>
+</div> 

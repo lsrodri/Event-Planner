@@ -159,3 +159,8 @@ output {
 	padding: 15px 0;
 	margin-top: 15px;
 }
+
+.my-events-item img {
+	width: 100%;
+	height: auto;
+}
