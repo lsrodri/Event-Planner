@@ -13,19 +13,7 @@
 	            	type="date"
 	            	class="form-control"/>
 	        </div>
-	        <div class="col-md-3" >
-	        	<label for="distance">Distance:</label>
-	        	<output for="distance" id="distanceOutput">5 km</output>
-				<input 
-					ng-model="distance"
-					ng-change="getEvents()"
-					oninput="document.getElementById('distanceOutput').value = this.value + ' km'"
-					type="range"
-					id="distance"
-					min="1"
-					max="50">
-	        </div>
-	        <div class="col-md-3 col-md-offset-3">
+	        <div class="col-md-3 ">
 	        	<label for="sort">Sort by:</label>
 	        	<select
 	        		ng-model="sort"
@@ -39,6 +27,19 @@
 	        		<option value="popularity">Popularity</option>
 	        	</select>
 	        </div>
+	        <div class="col-md-3" >
+	        	<label for="distance">Distance:</label>
+	        	<output for="distance" id="distanceOutput">5 km</output>
+				<input 
+					ng-model="distance"
+					ng-change="getEvents()"
+					oninput="document.getElementById('distanceOutput').value = this.value + ' km'"
+					type="range"
+					id="distance"
+					min="1"
+					max="50">
+	        </div>
+	    
         </form>  
 	</div>
 	<div class="col-xs-12 event-item" ng-repeat="event in events.events">

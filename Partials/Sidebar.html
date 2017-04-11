@@ -4,7 +4,7 @@
         <div class="row">
             <h4>
                 <i id="eventIcon" class="fa fa-bars"></i>
-                MY EVENTLIST
+                MY EVENTLIST 
             </h4>
         </div>
         <div class="col-xs-12 my-events-item" ng-repeat="event in events">
@@ -12,16 +12,17 @@
                 <img ng-src="{{event.eventImage}}" alt="{{event.eventName}}">
             </div>
             <div class="col-xs-9">
+
                 <div>{{event.eventDate | date:'dd/MM/yyyy - HH:mm':"+0200"}}</div>
                 <div>
                     <a ng-href="#!/ShowEvent/{{event.eventId}}">{{event.eventName}}</a>
                     <button id="removeBtn" class="btn btn-info" ng-click="removeEvent">X</button>
                 </div>
             </div>
+
         </div>
         
         <button id="printELBtn" class="btn btn-info"> Print</button>
-        
     </div>
 
     <div id="responsBox">

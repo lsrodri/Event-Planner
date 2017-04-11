@@ -139,7 +139,7 @@ p{
     border-bottom-left-radius: 2em;
     border-top-right-radius: 2em;
     border-bottom-right-radius: 2em;
-    margin-left: 230px;
+   
 }
  
 #mailBtb{
@@ -195,7 +195,6 @@ p{
     background-color: rgba(0,0,0,0.8);
     background-repeat: repeat;
     background-origin: border-box;
-
     color: #fff;
     font-size: 0px;
     padding: 15px 0;
