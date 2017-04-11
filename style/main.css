@@ -44,19 +44,29 @@ h4{
     text-align: center;
     padding-bottom: 15px;
 }
+
+h5{
+    color: white;
+    margin-left: 25%;
+    font-style: lighter; 
+    font-family: Helvetica;
+    font-size: 30px;
+    text-transform: uppercase;
+}
  
 p{
     font-family: Arial;
     font-family: Helvetica;
     font-style: lighter; 
-    text-transform: uppercase;
     text-align: center;
     font-size: 15px; 
+    color: white;
 }
  
 #eventList{
     color: white;
     margin-top: 30px; 
+    margin-bottom: 30px;
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 15px;
@@ -68,11 +78,14 @@ p{
  
 #responsBox{
     color: white;
+    margin-top: 30px;
     margin-bottom: 30px;
+
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 15px;
     padding-right: 15px;
+
     background-color: rgba(0,0,0,0.6);
     background-repeat: no-repeat;
  
@@ -90,32 +103,6 @@ p{
 .btn-info:hover{
     background-color: rgb(100,100,100);
     border-color: rgb(100,100,100);
-}
- 
-#eventList{
-    background-color: rgba(0,0,0,0.6);
-    color: white;
-    margin-top: 30px; 
-    
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
-    
-    background-repeat: no-repeat;
-    background-origin: content-box;
-}
- 
-#responsBox{
-    background-color: rgba(0,0,0,0.6);
-    background-repeat: no-repeat;
-    color: white;
-    margin-bottom: 30px;
-    margin-top: 0px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
 }
  
 .btn-info{
@@ -138,7 +125,7 @@ p{
     border-bottom-left-radius: 2em;
     border-top-right-radius: 2em;
     border-bottom-right-radius: 2em;
-   
+    margin-left: 80%; 
 }
  
 #mailBtb{
@@ -151,7 +138,13 @@ p{
  margin-left: 35%;
 }
 
- 
+#backBtn{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
 .form-control{
     font-weight: lighter;
     font-size: 11px;
@@ -163,15 +156,17 @@ p{
     margin-bottom: 4%;
     font-size: 48px;
 }
-#singelEvent{
-    padding-left: 22px;
-    font-family: Helvetica; 
-    font-weight: lighter;
-    font-size: 15px;
+
+
+
+#mainShowEvents{
+    background-color: rgba(0,0,0,0.6); 
+
+    margin-top: 30px;
 }
- 
+
 .form-control{
-    color: lightgrey;
+    color: black;
     font-family: Helvetica;
     font-weight: lighter;
     font-size: 11px;
@@ -261,4 +256,5 @@ output {
 .my-events-item img {
 	width: 100%;
 	height: auto;
+    margin-top: 100px;
 }
