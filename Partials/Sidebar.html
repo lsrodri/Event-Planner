@@ -1,18 +1,33 @@
-<div id="Sidebar" class="col-sm-3">
-        <div class="container-fluid">
-            <div class="row">
-                <h4>My events</h4>
-            </div>
+<div id="Sidebar" class="col-sm-3" ng-controller="sidebarCtrl">
+        
+        <div id="eventList" class="container-fluid">
+                    <h4>   <i id="eventIcon" class="fa fa-bars"></i>MY EVENTLIST</h4>
+                <table id="singelEvent">
+                    <tr>
+                      <th id="weekday">Date: {{weekday}}</th>
+                    </tr>
+                    <tr>
+                        <th id="event"> Event : {{eventName}}</th>
+                    </tr>
+                    <tr>
+                       <th>IMG <img src=""></th> 
+                    </tr>
+                    <tr>
+                        <th>
+                            <button id="removeBtn" class="btn btn-info" ng-click="removeEvent">X</button>
+                        </th>
+                    </tr>
+                </table>
             
-            <table id="showEventList">
-                <tr>
-                  <th id="weekday">{{weekday}}</th>
-                </tr>
-                <tr>
-                    <th id="event">{{eventName}}</th>
-                </tr>
-            </table>
-
-            <button id="printELBtn" class="btn btn-info"> Print</button>
+            <br>
+            <button id="printELBtn" class="btn btn-info" ng-click="printFunc()" >PRINT</button>
+            
         </div>
+        <br>
+        <div id="responsBox">
+            <i id="mailIcon" class="fa fa-envelope-open" style="font-size:24px"></i>
+            <p> IF YOU EXPERIENCE ANY DIFFERCULTIES PLEASE DO NOT HESITATE TO GET IN TOUCH WITH US</p>
+            <a id="mailBtb" href="mailto:someone@example.com?Subject=Hello%20again" class="btn btn-info">SEND E-MAIL</a> 
+        </div>
+        
     </div> 
