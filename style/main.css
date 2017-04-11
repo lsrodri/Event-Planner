@@ -106,7 +106,6 @@ p{
 }
  
 .btn-info{
-    background-color: #2F4F4F; 
     text-align: center;
     position: center;
     color: white;
@@ -237,13 +236,6 @@ output {
 }
 
 .event-filter{
-	background-color: white;
-	background-color: rgba(255,255,255,0.5);
-	padding: 15px 0;
-	margin-top: 15px;
-}
-
-.event-filter{
     color: lightgrey;
     font-family: Helvetica;
     font-weight: lighter;
@@ -251,10 +243,4 @@ output {
 	background-color: rgba(0,0,0,0.6); 
 	margin-top: 30px;
     padding: 15px 0;
-}
-
-.my-events-item img {
-	width: 100%;
-	height: auto;
-    margin-top: 100px;
 }
