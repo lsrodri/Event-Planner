@@ -39,7 +39,6 @@ h4{
     font-weight: lighter; 
     font-size: 20px;
     text-align: center;
-    padding-bottom: 15px;
 }
 
 h5{
@@ -195,18 +194,11 @@ p{
     color: #fff;
     padding: 15px 0;
 }
-
-.event-item img { 
-    margin-left: 5px;
-    margin-top: 15px;
-    margin-right: 5px;
-    margin-bottom: 5px;  
-}
  
 .event-item {
     background-color: rgba(0,0,0,0.6); 
-    margin: 1rem 0; 
-    padding-left: 5px;
+    margin: 10px 0; 
+    padding: 15px 0;
     color: white;
 }
 
@@ -275,4 +267,33 @@ output {
 .user-avatar img {
     width: 100%;
     height: auto;
+}
+
+.event-item-info {
+    display: inline;
+    padding: 2px 4px;  
+    background-color: #000;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.event-description {
+    padding-bottom: 10px;
+}
+
+.event-picture img,  .my-events-item img {
+    width: 100%;
+    height: auto;
+}
+
+.add-event {
+    background-color: white;
+    color: black;
+    border: none;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    padding: 0 10px;
 }
