@@ -27,6 +27,18 @@ eventPlannerApp.config(['$routeProvider',
          templateUrl: 'Partials/Sidebar.html',
          controller: 'sidebarCtrl' 
       }).
+         when('/Header', {
+        templateUrl: 'Partials/Header.html',
+        controller: 'headerCtrl'
+      }).
+         when('/Profile', {
+        templateUrl: 'Partials/Profile.html',
+        controller: 'ProfileCtrl'
+      }).
+         when('/Eventlist', {
+        templateUrl: 'Partials/Eventlist.html',
+        controller: 'EventlistCtrl'
+      }).
       otherwise({
         redirectTo: '/Home'
       });
