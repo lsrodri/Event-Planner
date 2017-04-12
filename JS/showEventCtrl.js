@@ -12,4 +12,8 @@ eventPlannerApp.controller('showEventCtrl', function ($scope,$routeParams,facebo
 		console.log(error);
 	});
 
+	$scope.doTheBack = function() {
+  		window.history.back();
+	};
+
 }); 

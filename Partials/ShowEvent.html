@@ -16,12 +16,12 @@
                 <img id="eventPic" ng-src="{{event.cover}}">
                 <h5 id="eventName">{{event.name}}</h5>
                 <div id="eventText">
-                    <p id="eventType">{{event.category}}</p>
+                    <p id="eventType">{{event.category}}</p><br>
                     <p>{{event.description}}</p>
-                </div>
-               
+                </div> 
             </div>
         </div>
-        <button id="backBtn" class="btn btn-info"> < </button>
+        <button id="backBtn" class="btn btn-info" ng-click="doTheBack()"> < </button>
+        <button id="addBtn" class="btn btn-info" ng-click= >ADD TO MY EVENTLIST </button>
     </div>    
 </div>

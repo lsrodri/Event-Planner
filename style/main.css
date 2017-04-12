@@ -53,6 +53,10 @@ h5{
     font-size: 30px;
     text-transform: uppercase;
 }
+
+hr{
+    color: white;
+}
  
 p{
     font-family: Arial;
@@ -62,6 +66,7 @@ p{
     font-size: 15px; 
     color: white;
 }
+
 #dateDiv{
     margin-left: 7px;
 }
@@ -197,24 +202,31 @@ p{
     padding: 15px 0;
 }
 
- 
-.event-picture {
-    padding: 0;
+img{
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em; 
+    margin-left: 5px;
+    margin-top: 15px;
+    margin-right: 5px;
+    margin-bottom: 5px;  
 }
  
 .event-item {
-    background-color: #000;
-    background-color: rgba(0,0,0,0.5);
     background-color: rgba(0,0,0,0.6); 
     margin: 1rem 0; 
-    color: #fff;
-    padding: 0;
-}
- 
-.event-item a {
-    padding: 0 1rem;
+    padding-left: 5px;
     color: white;
 }
+
+.event-item a{
+    color: white;
+    font-family: Helvetica; 
+    font-size: 25px;
+    text-transform: lighter;
+}
+
  
 .logo h4 {
     text-transform: uppercase;
@@ -222,11 +234,9 @@ p{
     text-align: center;
     margin: 20px;
     font-weight: bold;
-    font-weight: bold; 
 }
  
 .login-container {
-    background-color: #fff;
     background-color: rgba(255,255,255,0.5);
     border-radius: 10px;
     margin: 20% auto 0;
@@ -236,14 +246,20 @@ p{
 
 output {
 	display: inline;
+    color: lightgrey;
 }
 
 .event-filter{
-    color: lightgrey;
+    color: grey;
     font-family: Helvetica;
     font-weight: lighter;
     text-transform: uppercase;
 	background-color: rgba(0,0,0,0.6); 
 	margin-top: 30px;
     padding: 15px 0;
+}
+#eventDesc{
+    padding-bottom: 30px;
+    padding-top: 15px;
+    padding-left: 3px;
 }

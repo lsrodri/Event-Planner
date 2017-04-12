@@ -42,24 +42,24 @@
 	    
         </form>  
 	</div>
-	<div class="col-xs-12 event-item" ng-repeat="event in events.events">
-		<div class="col-xs-2 event-picture">
+	<div id="eventDesc" class="col-xs-12 event-item" ng-repeat="event in events.events">
+		<div class="col-xs-3 event-picture">
 			<img ng-src="{{event.profilePicture}}" alt="{{event.name}}">
 		</div>
-		<div class="col-xs-10">
+		<div class="col-xs-9">
 			<div class="col-xs-12">
 				<h4>
 					<a ng-href="#!/ShowEvent/{{event.id}}">{{event.name}}</a>
 				</h4>
-				<div>{{event.description}}</div>
-				<div>{{event.distance}}</div>
-				<div>{{event.endTime}}</div>
-				<div>{{event.startTime}}</div>
-				<div>{{event.stats.attending}}</div>
-				<div>{{event.timeFromNow}}</div>
-				<div>{{event.venue.name}}</div>
-				<div>{{event.venue.location}}</div>
-				<div>{{event.venue.profilePicture}}</div>
+				<div>{{event.description}}</div> <br>
+				<div>Distance: {{event.distance}}km</div> 
+				<div>Endtime: {{event.endTime}}</div> 
+				<div>Starttime: {{event.startTime}}</div> 
+				<div>Attendings: {{event.stats.attending}}</div> 
+				<div>Time from now: {{event.timeFromNow}}</div> 
+				<div>Venue: {{event.venue.name}}</div> <br>
+				<div>Location: {{event.venue.location}}</div> <br>
+				<div>Profil: {{event.venue.profilePicture}}</div> 
 			</div>
 		</div>
 	</div>
