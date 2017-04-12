@@ -161,12 +161,6 @@ p{
     font-size: 48px;
 }
 
-
-#eIcon{
- 
-}
-
-
 #mainShowEvents{
     background-color: rgba(0,0,0,0.6); 
 
@@ -199,11 +193,10 @@ p{
     background-repeat: repeat;
     background-origin: border-box;
     color: #fff;
-    font-size: 0px;
     padding: 15px 0;
 }
 
-img{ 
+.event-item img { 
     margin-left: 5px;
     margin-top: 15px;
     margin-right: 5px;
@@ -225,12 +218,13 @@ img{
 }
 
  
-.logo h4 {
-    text-transform: uppercase;
-    font-size: 38px;
-    text-align: center;
-    margin: 20px;
-    font-weight: bold;
+.logo {
+    height: 40px;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
 }
  
 .login-container {
@@ -259,4 +253,26 @@ output {
     padding-bottom: 30px;
     padding-top: 15px;
     padding-left: 3px;
+}
+
+.header-right {
+    text-align: right;
+}
+
+.user-name {
+    display: inline-block;
+    height: 40px;
+    padding-right: 5px;
+}
+
+.user-avatar {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: black;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: auto;
 }
