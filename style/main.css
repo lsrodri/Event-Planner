@@ -203,11 +203,7 @@ p{
     padding: 15px 0;
 }
 
-img{
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
-    border-bottom-left-radius: 1em;
-    border-bottom-right-radius: 1em; 
+img{ 
     margin-left: 5px;
     margin-top: 15px;
     margin-right: 5px;
