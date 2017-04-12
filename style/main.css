@@ -30,10 +30,6 @@ h1{
  
 h4{
     text-transform: uppercase;
-    font-family: Arial;
-    text-decoration:  #2F4F4F;
-    font-style: lighter; 
-    font-size: 30px;
     font-family: Helvetica;
     text-decoration:  #2F4F4F;
     font-weight: lighter; 
@@ -71,7 +67,7 @@ p{
     color: white;
     margin-top: 30px; 
     margin-bottom: 30px;
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 30px;
     padding-left: 15px;
     padding-right: 15px;
@@ -122,13 +118,9 @@ p{
     border-color: rgb(100,100,100);
 }
 
-#removeBtn{
+.remove-event {
     background-color: #4d0000;
-    border-top-left-radius: 2em;
-    border-bottom-left-radius: 2em;
-    border-top-right-radius: 2em;
-    border-bottom-right-radius: 2em;
-    margin-left: 80%; 
+    border-radius: 3rem;
 }
  
 #mailBtb{
@@ -255,6 +247,7 @@ output {
     display: inline-block;
     height: 40px;
     padding-right: 5px;
+    font-weight: lighter;
 }
 
 .user-avatar {
@@ -293,7 +286,23 @@ output {
     color: black;
     border: none;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: lighter;
-    font-size: 18px;
+    font-size: 17px;
     padding: 0 10px;
+    text-transform: uppercase;
+}
+
+.my-events-item {
+    width: 100%;
+    display: block;
+    clear: both;
+    padding-top: 10px;
+}
+
+.my-events-item a {
+    color: white;
+    font-weight: bold;
+}
+
+.my-events-text, .my-events-image {
+    padding-left: 0;
 }

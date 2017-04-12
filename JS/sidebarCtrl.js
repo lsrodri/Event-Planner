@@ -4,6 +4,10 @@ eventPlannerApp.controller('sidebarCtrl', function ($scope,$routeParams, firebas
 		window.print();
 	};
 
+	$scope.removeEvent = function(id){
+		$scope.myEvents.$remove(id);
+	}
+
 	//Checking on authentication
 	firebase.auth().onAuthStateChanged(function(user) {
 		if (user) {
@@ -11,4 +15,6 @@ eventPlannerApp.controller('sidebarCtrl', function ($scope,$routeParams, firebas
 		}
 	});
  
+
+
 }); 
