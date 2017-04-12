@@ -363,3 +363,49 @@ output {
 .my-events-text, .my-events-image {
     padding-left: 0;
 }
+
+
+.event-item-info {
+    display: inline;
+    padding: 2px 4px;  
+    background-color: #000;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.event-description {
+    padding-bottom: 10px;
+}
+
+.event-picture img,  .my-events-item img {
+    width: 100%;
+    height: auto;
+}
+
+.add-event {
+    background-color: white;
+    color: black;
+    border: none;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 17px;
+    padding: 0 10px;
+    text-transform: uppercase;
+}
+
+.my-events-item {
+    width: 100%;
+    display: block;
+    clear: both;
+    padding-top: 10px;
+}
+
+.my-events-item a {
+    color: white;
+    font-weight: bold;
+}
+
+.my-events-text, .my-events-image {
+    padding-left: 0;
+}
