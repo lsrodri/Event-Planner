@@ -16,5 +16,9 @@ eventPlannerApp.controller('sidebarCtrl', function ($scope,$routeParams, $fireba
 	 	syncObject.$bindTo($scope, "events");
 	  } 
 	});
+
+	$scope.addEvent = function(){
+
+	}
  
 }); 
