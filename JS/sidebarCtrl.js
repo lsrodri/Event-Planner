@@ -19,6 +19,7 @@ eventPlannerApp.controller('sidebarCtrl', function ($scope,$routeParams, $fireba
 
 	$scope.addEvent = function(){
 
+		
 	}
  
 }); 

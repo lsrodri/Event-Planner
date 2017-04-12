@@ -1,6 +1,7 @@
 <ng-include src="'partials/Header.html'" ng-controller="headerCtrl"></ng-include>
 <ng-include src="'partials/Sidebar.html'" ng-controller="sidebarCtrl"></ng-include>
 
+
 <div id="ShowEvents" class="col-sm-9">
     <div id="Loading" class="load" ng-show="loading">
         <div class="container-fluid">
@@ -22,6 +23,7 @@
             </div>
         </div>
         <button id="backBtn" class="btn btn-info" ng-click="doTheBack()"> < </button>
-        <button id="addBtn" class="btn btn-info" ng-click"addEvent()"= >ADD TO MY EVENTLIST </button>
+        <button id="addBtn" class="btn btn-info" ng-click="addEvent()" >ADD TO MY EVENTLIST </button>
     </div>    
 </div>
+
