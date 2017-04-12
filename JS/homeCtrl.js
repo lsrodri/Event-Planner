@@ -1,8 +1,24 @@
-eventPlannerApp.controller('homeCtrl', function ($scope, $routeParams, $window, facebookService, eventService, geolocationService) {
+eventPlannerApp.controller('homeCtrl', function ($scope, $routeParams, $window, facebookService, eventService, geolocationService, firebaseService) {
 
 	$scope.sort = "time";
 	$scope.dateSelection = "";
 	$scope.distance = 5;
+
+	//Checking on authentication
+	firebase.auth().onAuthStateChanged(function(user) {
+		if (user) {
+			$scope.myEvents = firebaseService.getRef();
+		}
+	});
+
+	$scope.addEvent = function(id,name,datetime,image){
+		$scope.myEvents.push({
+			"eventDate" : datetime,
+			"eventId" : id,
+			"eventImage" : image,
+			"eventName" : name
+	    });
+	}
 
 	var distance = 1000;
 	var since = null;

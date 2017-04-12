@@ -2,25 +2,33 @@
 <div id="Sidebar" class="col-sm-3" ng-controller="sidebarCtrl">
         
     <div id="eventList" class="container-fluid">
-        <div class="row">
+        <div class="col-xs-12">
             <h4>
-                <i id="eventIcon" class="fa fa-bars"></i>
-                MY EVENTLIST 
-            </h4>
+                <i class="fa fa-list-ul"></i>
+                My events
+            </h4> 
         </div>
-        <div class="col-xs-12 my-events-item" ng-repeat="event in events">
-            <div class="col-xs-3">
+        <div class="my-events-item" ng-repeat="(id, event) in myEvents">
+            <div class="col-xs-3 my-events-image">
                 <img ng-src="{{event.eventImage}}" alt="{{event.eventName}}">
             </div>
-            <div class="col-xs-9">
-
-                <div>{{event.eventDate | date:'dd/MM/yyyy - HH:mm':"+0200"}}</div>
+            <div class="col-xs-7 my-events-text">
                 <div>
-                    <a ng-href="#!/ShowEvent/{{event.eventId}}">{{event.eventName}}</a>
-                    <button id="removeBtn" class="btn btn-info" ng-click="removeEvent">X</button>
+                    {{event.eventDate | date:'dd/MM/yyyy - HH:mm':"+0200"}}
+                </div>
+                <div>
+                    <a ng-href="#!/ShowEvent/{{event.eventId}}">
+                        {{event.eventName}}
+                    </a>
                 </div>
             </div>
-            <hr>
+            <div class="col-xs-2">
+                <button
+                    class="btn remove-event"
+                    ng-click="removeEvent(id)">
+                    <i class="fa fa-trash"></i>
+                </button>
+            </div>
         </div>
         
         <button id="printELBtn" class="btn btn-info" ng-click="printFunc()"> Print</button>
