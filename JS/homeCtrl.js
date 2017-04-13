@@ -1,5 +1,6 @@
 eventPlannerApp.controller('homeCtrl', function ($scope, $routeParams, $window, facebookService, eventService, geolocationService, firebaseService) {
 
+	//Default setting is to have a distance of 5km, no date selection, and order results by time
 	$scope.sort = "time";
 	$scope.dateSelection = "";
 	$scope.distance = 5;
@@ -7,17 +8,28 @@ eventPlannerApp.controller('homeCtrl', function ($scope, $routeParams, $window, 
 	//Checking on authentication
 	firebase.auth().onAuthStateChanged(function(user) {
 		if (user) {
+			//Getting user's list of events
 			$scope.myEvents = firebaseService.getRef();
 		}
 	});
 
 	$scope.addEvent = function(id,name,datetime,image){
-		$scope.myEvents.push({
-			"eventDate" : datetime,
-			"eventId" : id,
-			"eventImage" : image,
-			"eventName" : name
-	    });
+		
+		//chhecking if event already exists on the database
+		firebaseService.checkBeforeAdding(id).once('value').then(function(snapshot) {
+		  //if returned object is null, allow adding to continue
+		  if(snapshot.val() === null) {
+		  	$scope.myEvents.push({
+				"eventDate" : datetime,
+				"eventId" : id,
+				"eventImage" : image,
+				"eventName" : name
+		    });
+		  //otherwise let user know the new event is already saved
+		  } else {
+		  	
+		  }
+		});
 	}
 
 	var distance = 1000;
