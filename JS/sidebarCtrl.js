@@ -5,7 +5,8 @@ eventPlannerApp.controller('sidebarCtrl', function ($scope,$routeParams, firebas
 	};
 
 	$scope.removeEvent = function(id){
-		$scope.myEvents.$remove(id);
+		delete $scope.myEvents[id];
+		$scope.myEvents.$save();
 	}
 
 	//Checking on authentication
@@ -14,7 +15,5 @@ eventPlannerApp.controller('sidebarCtrl', function ($scope,$routeParams, firebas
 			$scope.myEvents = firebaseService.getEvents();
 		}
 	});
- 
-
 
 }); 
