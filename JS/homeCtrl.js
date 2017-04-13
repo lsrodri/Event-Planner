@@ -1,4 +1,4 @@
-eventPlannerApp.controller('homeCtrl', function ($scope, $routeParams, $window, facebookService, eventService, geolocationService, firebaseService) {
+eventPlannerApp.controller('homeCtrl', function ($scope, $routeParams, $window, facebookService, eventService, geolocationService, firebaseService, alertService) {
 
 	//Default setting is to have a distance of 5km, no date selection, and order results by time
 	$scope.sort = "time";
@@ -17,7 +17,7 @@ eventPlannerApp.controller('homeCtrl', function ($scope, $routeParams, $window, 
 		
 		//chhecking if event already exists on the database
 		firebaseService.checkBeforeAdding(id).once('value').then(function(snapshot) {
-		  //if returned object is null, allow adding to continue
+		  //if event is not already in the user's list, allow adding to continue
 		  if(snapshot.val() === null) {
 		  	$scope.myEvents.push({
 				"eventDate" : datetime,
@@ -25,10 +25,20 @@ eventPlannerApp.controller('homeCtrl', function ($scope, $routeParams, $window, 
 				"eventImage" : image,
 				"eventName" : name
 		    });
+
+		    $scope.$apply(function () {
+		  		alertService.add("alert-success", "Added to your list!", 4000);
+		  	});
+
 		  //otherwise let user know the new event is already saved
 		  } else {
-		  	
+
+		  	$scope.$apply(function () {
+		  		alertService.add("alert-warning", "This event already exists in your list.", 4000);
+		  	});
+
 		  }
+
 		});
 	}
 

@@ -6,12 +6,25 @@
         	<img src="Images/logo.svg">
         </div>
     </div>
-    <div class="col-sm-8 header-right">    	
+    <div class="col-sm-8 header-right">
+        
+        <div class="alert-container">
+            <div 
+                ng-repeat="alert in alerts"
+                class="alert-message alert {{alert.type}}">
+                <button
+                    ng-click="closeAlert($index)"
+                    type="button"
+                    class="close"
+                    aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{ alert.msg }}
+            </div>    	
+        </div>
+        
         <div class="user-profile">
         	<div class="user-name">{{name}}</div>
-        	<div class="user-avatar">
-        		<img ng-src="{{avatar}}" alt="{{name}}">
-        	</div>
             <div class="dropdown">
               <img id="menuarrow" ng-click="magda()" class="dropbtn" src="Images/menuarrow.png"></img>
               <div id="myDropdown" class="dropdown-content pull-left">
