@@ -410,3 +410,35 @@ output {
 .my-events-text, .my-events-image {
     padding-left: 0;
 }
+
+.alert-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 10px;
+    z-index: 9999;
+}
+
+.alert-message {
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 15px;
+}
+
+.alert-message + .alert-message {
+    margin-top: 10px;
+}
+
+.alert-message.alert-warning {
+    background-color: rgba(252,248,227, 0.9);
+}
+
+.alert-message.alert-success {
+    background-color: rgba(223, 240, 216, 0.9);
+}
+
+.alert-message.alert-info {
+    background-color: rgba(217, 237, 247, 0.9);
+}
