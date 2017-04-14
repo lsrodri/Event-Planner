@@ -16,7 +16,7 @@ eventPlannerApp.controller('headerCtrl', function ($scope, $routeParams, alertSe
 
 	/* When the user clicks on the button, 
   toggle between hiding and showing the dropdown content */
-  $scope.magda= function(){
+  $scope.dropdown= function(){
       document.getElementById("myDropdown").classList.toggle("show");
   }
 
