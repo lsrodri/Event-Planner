@@ -10,7 +10,7 @@ module.exports = function(grunt) {
                 nospawn: true
             },
             js: {
-                files: ["js/*.js"],
+                files: ["js/*.js", "js/controllers/*.js", "js/model/*.js"],
                 options: {
                   livereload: true,
                   keepAlive: true

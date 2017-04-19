@@ -1,5 +1,4 @@
 body {
-
     background: url("../Images/mainBG.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -45,7 +44,11 @@ body {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
- 
+
+label {
+    color: white;
+}
+
 h1{
     color: black;
     text-align: center; 
@@ -65,6 +68,21 @@ h4{
     font-weight: lighter; 
     font-size: 20px;
     text-align: center;
+}
+
+input.form-control, button.btn, select.form-control {
+    border-radius: 0;
+    font-size: 13px;
+}
+
+select.form-control {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    background-color: white;
+    background-color: rgba(255,255,255,0.7);
+    background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
 }
 
 h5{
@@ -110,7 +128,7 @@ p{
     color: white;
     margin-top: 30px;
     margin-bottom: 30px;
-
+    text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 15px;
@@ -154,13 +172,11 @@ p{
 }
  
 #mailBtb{
-    margin-left: 25%; 
-    margin-right: 25%;
+    margin-top: 20px;
 }
  
 #printELBtn{
-    margin-right: 40%;
-    margin-left: 35%;
+    margin-top: 20px;
 }
 
 #backBtn{
@@ -176,10 +192,12 @@ p{
     background-color: rgba(255,255,255,0.7); 
 }
 
+.print-container {
+    text-align: center;
+}
 #mailIcon{
-    margin-left: 40%;
-    margin-bottom: 4%;
     font-size: 48px;
+    margin-bottom: 30px;
 }
 
 #mainShowEvents{
