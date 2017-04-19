@@ -43,42 +43,64 @@
 	        </div>
         </form>  
 	</div>
-	<div class="col-xs-12 event-item" ng-repeat="event in events.events">
-		<div class="col-xs-2 event-picture">
-			<img ng-src="{{event.profilePicture}}" alt="{{event.name}}">
+	<div
+		class="loading-container"
+		ng-show="loading">
+		<i class="fa fa-circle-o-notch loading-icon"></i>
+		<div class="loading-text">
+			Loading
 		</div>
-		<div class="col-xs-10">
-			<div>
-				<h4>
-					<a ng-href="#!/ShowEvent/{{event.id}}">{{event.name}}</a>
-				</h4>
-				<div class="event-description">
-					{{event.description | limitTo:320 }} ...
+	</div>
+	<div
+		ng-show="!loading" 
+		class="events-container">
+		
+		<div 
+			ng-repeat="event in events.events"
+			class="col-xs-12 event-item">
+			<div class="col-xs-2 event-picture">
+				<img ng-src="{{event.profilePicture}}" alt="{{event.name}}">
+			</div>
+			<div class="col-xs-10">
+				<div>
+					<h4>
+						<a ng-href="#!/ShowEvent/{{event.id}}">{{event.name}}</a>
+					</h4>
+					<div class="event-description">
+						{{event.description | limitTo:320 }} ...
+					</div>
+					<div class="event-item-info">
+						<i class="fa fa-location-arrow"></i>
+						{{event.distance}}m
+					</div> 
+					<div class="event-item-info">
+						<i class="fa fa-clock-o"></i>
+						{{event.startTime | date:'dd/MM/yyyy - HH:mm':"+0200" }} - {{event.endTime | date:'HH:mm':"+0200"}}
+					</div> 
+					<div class="event-item-info">
+						<i class="fa fa-check"></i>
+						{{event.stats.attending}}
+					</div> 
+					<div class="event-item-info">
+						<i class="fa fa-map-pin"></i>
+						{{event.venue.name}}
+					</div>
+					<button 
+						type="button"
+						ng-click="addEvent(event.id,event.name,event.startTime,event.profilePicture)"
+						class="add-event">
+						<i class="fa fa-plus"></i>
+						Save
+					</button>
 				</div>
-				<div class="event-item-info">
-					<i class="fa fa-location-arrow"></i>
-					{{event.distance}}m
-				</div> 
-				<div class="event-item-info">
-					<i class="fa fa-clock-o"></i>
-					{{event.startTime | date:'dd/MM/yyyy - HH:mm':"+0200" }} - {{event.endTime | date:'HH:mm':"+0200"}}
-				</div> 
-				<div class="event-item-info">
-					<i class="fa fa-check"></i>
-					{{event.stats.attending}}
-				</div> 
-				<div class="event-item-info">
-					<i class="fa fa-map-pin"></i>
-					{{event.venue.name}}
-				</div>
-				<button 
-					type="button"
-					ng-click="addEvent(event.id,event.name,event.startTime,event.profilePicture)"
-					class="add-event">
-					<i class="fa fa-plus"></i>
-					Save
-				</button>
 			</div>
 		</div>
+
+	</div>
+
+	<div 
+		ng-show="noEvents"
+		class="no-events col-xs-12">
+			No events were found
 	</div>
 </div>
