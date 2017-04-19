@@ -536,3 +536,20 @@ output {
 #Help h3 {
     font-weight: lighter;
 }
+
+.login-container .logo img {
+    width: 100%;
+    height: auto;
+}
+
+.login-container .logo {
+    padding-top: 15px;
+}
+
+.login-container .login-button {
+    margin-top:50px;
+}
+.login-container .login-button button{
+    border:none;
+}
+
