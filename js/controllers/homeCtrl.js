@@ -14,11 +14,45 @@ eventPlannerApp.controller('homeCtrl', function ($scope, $routeParams, $window, 
 		}
 	});
 
-
+	/*
 	$scope.addEvent = function(id,name,datetime,image){
 		
 		//checking if event already exists on the database
 		firebaseService.checkBeforeAdding(id).once('value').then(function(snapshot) {
+		  //if event is not already in the user's list, allow adding to continue
+		  if(snapshot.val() === null) {
+		  	
+		  	$scope.myEvents.push({
+				"eventDate" : datetime,
+				"eventId" : id,
+				"eventImage" : image,
+				"eventName" : name
+		    });
+
+		    $scope.$apply(function () {
+		  		alertService.add("alert-success", "Added to your list!", 4000);
+		  	});
+
+		  //otherwise let user know the new event is already saved
+		  } else {
+		  	//Telling users that the event is already in their list of events
+		  	$scope.$apply(function () {
+		  		alertService.add("alert-warning", "This event already exists in your list.", 4000);
+		  	});
+
+		  }
+
+		}, function(error){
+			$scope.$apply(function () {
+		  		alertService.add("alert-warning", "Unable to save event. Please check your internet connection.", 4000);
+		  	});
+		});
+	}
+	*/
+
+	$scope.addEvent = function(id,name,datetime,image){
+		
+		firebaseService.addEvent(id,name,datetime,image,function(snapshot) {
 		  //if event is not already in the user's list, allow adding to continue
 		  if(snapshot.val() === null) {
 		  	/*
@@ -46,12 +80,11 @@ eventPlannerApp.controller('homeCtrl', function ($scope, $routeParams, $window, 
 
 		  }
 
-		}, function(error){
-			$scope.$apply(function () {
-		  		alertService.add("alert-warning", "Unable to save event. Please check your internet connection.", 4000);
-		  	});
 		});
+
 	}
+
+
 
 	var distance = 5000;
 	var since = null;
