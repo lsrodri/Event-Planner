@@ -7,10 +7,6 @@ eventPlannerApp.config(['$routeProvider',
         templateUrl: 'Partials/home.html',
         controller: 'homeCtrl'
       }).
-      when('/Event', {
-        templateUrl: 'Partials/Event.html',
-        controller: 'eventCtrl'
-      }).
       when('/login', {
         templateUrl: 'Partials/Login.html',
         controller: 'loginCtrl'
@@ -34,10 +30,6 @@ eventPlannerApp.config(['$routeProvider',
          when('/Profile', {
         templateUrl: 'Partials/Profile.html',
         controller: 'ProfileCtrl'
-      }).
-         when('/Eventlist', {
-        templateUrl: 'Partials/Eventlist.html',
-        controller: 'EventlistCtrl'
       }).
       otherwise({
         redirectTo: '/Home'
