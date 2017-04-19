@@ -39,6 +39,9 @@ eventPlannerApp.config(['$routeProvider',
         templateUrl: 'Partials/Eventlist.html',
         controller: 'EventlistCtrl'
       }).
+        when('/Help', {
+        templateUrl: 'Partials/Help.html',
+      }).
       otherwise({
         redirectTo: '/Home'
       });
