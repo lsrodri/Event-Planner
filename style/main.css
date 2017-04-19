@@ -1,6 +1,6 @@
 body {
 
-    background: url("../Images/a.jpg") no-repeat center center fixed;
+    background: url("../Images/background.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -449,6 +449,17 @@ output {
     background-color: rgba(0,0,0,0.6);
     background-repeat: no-repeat;
     background-origin: content-box;
+}
 
-
+#Help {
+    color: white;
+    margin-top: 30px; 
+    margin-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(0,0,0,0.6);
+    background-repeat: no-repeat;
+    background-origin: content-box;
 }
