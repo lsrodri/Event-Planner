@@ -23,6 +23,13 @@ eventPlannerApp.factory('firebaseService', function($firebaseObject, $firebaseAr
                         .orderByChild("eventId")
                         .equalTo(id);
             return ref;
-        }   
+        },
+        addEvent: function(id,name,datetime,image){
+            this.checkBeforeAdding(id).once('value').then(function(snapshot) {
+                if(snapshot.val() === null) {
+                    
+                }
+            });
+        } 
     }
 });

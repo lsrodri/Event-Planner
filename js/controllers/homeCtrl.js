@@ -14,6 +14,7 @@ eventPlannerApp.controller('homeCtrl', function ($scope, $routeParams, $window, 
 		}
 	});
 
+
 	$scope.addEvent = function(id,name,datetime,image){
 		
 		//checking if event already exists on the database
