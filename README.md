@@ -1,2 +1,1 @@
-# Eventplanner
-hejhej
+The project is divided in eight different particles to represent the different view. The projects interaction are as well separated within the different controller. To keep the project within the object oriented paradigm we have tried to eliminate and any kind of repeated methods. The views are separated from the model and do not change the model directly and as the tasks describes no graphics are used imported to the model. We have used the framework Angular as learned in the different labs. Furthermore do we use the Node.js, Firebase and Heroku.  
