@@ -262,7 +262,6 @@ output {
     height: auto;
 }
 
-/* Dropdown Button */
 .dropbtn {
     background-color: gray;
     color: white;
@@ -272,19 +271,16 @@ output {
     cursor: pointer;
 }
 
-/* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
     background-color: black;
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
     display: inline-block;
 
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -294,7 +290,7 @@ output {
     z-index: 1;
 }
 
-/* Links inside the dropdown */
+
 .dropdown-content a {
     color: white;
     padding: 5px 5px;
@@ -303,15 +299,14 @@ output {
     font-family: Arial;
 }
 
-/* Change color of dropdown links on hover */
+
 .dropdown-content a:hover {background-color: #f1f1f1}
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
 .user-name2 {
-    color: black;
-    font-size: 50px;
+    color: white;
+    font-size: 40px;
 
 }
 
@@ -441,4 +436,19 @@ output {
 
 .alert-message.alert-info {
     background-color: rgba(217, 237, 247, 0.9);
+}
+
+#Profile {
+    color: white;
+    margin-top: 30px; 
+    margin-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(0,0,0,0.6);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+
+
 }
