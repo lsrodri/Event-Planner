@@ -87,7 +87,6 @@ select.form-control {
 
 h5{
     color: white;
-    margin-left: 25%;
     font-style: lighter; 
     font-family: Helvetica;
     font-size: 30px;
@@ -511,6 +510,29 @@ output {
     background-color: rgba(0,0,0,0.6);
     background-repeat: no-repeat;
     background-origin: content-box;
+}
 
+#eventGallery {
+    padding-top: 20px;
+}
 
+#eventGallery img{
+    max-width: 100%;
+    height: auto;
+}
+
+#eventGallery .event-item-info {
+    color: white;
+}
+
+#Help {
+    text-align: center;
+}
+
+#Help h1 {
+    color: white;
+}
+
+#Help h3 {
+    font-weight: lighter;
 }

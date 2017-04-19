@@ -25,7 +25,10 @@ eventPlannerApp.factory('facebookService', function($window, $q) {
           FB.api(
             '/' + id,
             'GET',
-            {"accessToken":token},
+            {
+              "accessToken":token,
+              "fields":"attending_count,cover,description,start_time,end_time,name,place"
+            },
             function(response) {
                 deferred.resolve(response);
             }
