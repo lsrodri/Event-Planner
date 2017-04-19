@@ -24,11 +24,9 @@ eventPlannerApp.factory('firebaseService', function($firebaseObject, $firebaseAr
                         .equalTo(id);
             return ref;
         },
-        addEvent: function(id,name,datetime,image){
-            this.checkBeforeAdding(id).once('value').then(function(snapshot) {
-                if(snapshot.val() === null) {
-                    
-                }
+        addEvent: function(id,name,datetime,image, callback){
+            this.checkBeforeAdding(id).once('value').then(function(data){
+                callback(data);
             });
         } 
     }
