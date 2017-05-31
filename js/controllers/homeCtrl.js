@@ -7,54 +7,17 @@ eventPlannerApp.controller('homeCtrl', function ($scope, $routeParams, $window, 
 	$scope.loading = true;
 
 	//Checking on authentication
-	firebase.auth().onAuthStateChanged(function(user) {
-		if (user) {
-			//Getting user's list of events
-			$scope.myEvents = firebaseService.getRef();
-		}
+	firebaseService.checkAuth(function(){
+		//Assigning the firebase object to myEvents
+		$scope.myEvents = firebaseService.getRef();
 	});
 
-	/*
 	$scope.addEvent = function(id,name,datetime,image){
 		
-		//checking if event already exists on the database
-		firebaseService.checkBeforeAdding(id).once('value').then(function(snapshot) {
+		firebaseService.addEvent(id,name,datetime,image, function(unique) {
+		  
 		  //if event is not already in the user's list, allow adding to continue
-		  if(snapshot.val() === null) {
-		  	
-		  	$scope.myEvents.push({
-				"eventDate" : datetime,
-				"eventId" : id,
-				"eventImage" : image,
-				"eventName" : name
-		    });
-
-		    $scope.$apply(function () {
-		  		alertService.add("alert-success", "Added to your list!", 4000);
-		  	});
-
-		  //otherwise let user know the new event is already saved
-		  } else {
-		  	//Telling users that the event is already in their list of events
-		  	$scope.$apply(function () {
-		  		alertService.add("alert-warning", "This event already exists in your list.", 4000);
-		  	});
-
-		  }
-
-		}, function(error){
-			$scope.$apply(function () {
-		  		alertService.add("alert-warning", "Unable to save event. Please check your internet connection.", 4000);
-		  	});
-		});
-	}
-	*/
-
-	$scope.addEvent = function(id,name,datetime,image){
-		
-		firebaseService.addEvent(id,name,datetime,image,function(snapshot) {
-		  //if event is not already in the user's list, allow adding to continue
-		  if(snapshot.val() === null) {
+		  if(unique === true) {
 		  	/*
 		  	Firebase allows a 3-way data binding,
 		  	so it is not necessary to call a service as updating the
@@ -84,8 +47,6 @@ eventPlannerApp.controller('homeCtrl', function ($scope, $routeParams, $window, 
 
 	}
 
-
-
 	var distance = 5000;
 	var since = null;
 	var until = null;
@@ -93,7 +54,6 @@ eventPlannerApp.controller('homeCtrl', function ($scope, $routeParams, $window, 
 		latitude: null,
 		longitude: null
 	}
-
 	
 	//Checking whether user is logged in / signed up
 	facebookService.getToken().then(function(token){

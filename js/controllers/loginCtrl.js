@@ -1,4 +1,4 @@
-eventPlannerApp.controller('loginCtrl', function ($scope,$routeParams, $window, facebookService) {
+eventPlannerApp.controller('loginCtrl', function ($scope,$routeParams, $window, facebookService, firebaseService) {
 
 	facebookService.getToken().then(function(token){
 		if(token) {
@@ -9,7 +9,7 @@ eventPlannerApp.controller('loginCtrl', function ($scope,$routeParams, $window, 
 	});
 
 	$scope.fbLogin = function(){
-		firebase.auth().signInWithRedirect(provider);
+		firebaseService.fbLogin();
 	}
 
 }); 

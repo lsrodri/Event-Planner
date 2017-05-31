@@ -1,10 +1,9 @@
-eventPlannerApp.controller('headerCtrl', function ($scope, $routeParams, alertService) {
+eventPlannerApp.controller('headerCtrl', function ($scope, $routeParams, alertService, firebaseService) {
 
-	firebase.auth().onAuthStateChanged(function(user) {
-	  if (user) {
+	//Checking on authentication
+  firebaseService.checkAuth(function(){
 	    $scope.name = firebase.auth().currentUser.displayName;
 		  $scope.avatar = firebase.auth().currentUser.photoURL;
-	  }
 	});
 
   //Adding alerts to the header

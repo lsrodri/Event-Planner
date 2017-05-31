@@ -18,18 +18,17 @@ eventPlannerApp.controller('showEventCtrl', function ($scope,$routeParams,facebo
 	};
 
 	//Checking on authentication
-	firebase.auth().onAuthStateChanged(function(user) {
-		if (user) {
-			//Getting user's list of events
-			$scope.myEvents = firebaseService.getRef();
-		}
+	firebaseService.checkAuth(function(){
+		//Getting user's list of events
+		$scope.myEvents = firebaseService.getRef();
 	});
 
 	$scope.addEvent = function(id,name,datetime,image){
 		
-		firebaseService.addEvent(id,name,datetime,image,function(snapshot) {
+		firebaseService.addEvent(id,name,datetime,image, function(unique) {
+		  
 		  //if event is not already in the user's list, allow adding to continue
-		  if(snapshot.val() === null) {
+		  if(unique === true) {
 		  	/*
 		  	Firebase allows a 3-way data binding,
 		  	so it is not necessary to call a service as updating the
