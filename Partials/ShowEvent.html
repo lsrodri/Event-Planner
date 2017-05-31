@@ -43,6 +43,9 @@
                         <p>{{event.description}}</p>
                     </div>
 
+                    <ng-map id="map" zoom="12" center="[{{event.place.location.latitude}}, {{event.place.location.longitude}}]">
+                        <marker position="[{{event.place.location.latitude}}, {{event.place.location.longitude}}]" title="Venue"></marker>
+                    </ng-map>
                 </div>
             </div>
         </div>

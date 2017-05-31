@@ -553,3 +553,6 @@ output {
     border:none;
 }
 
+#eventText {
+    padding: 15px 0;
+}

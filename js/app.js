@@ -1,4 +1,4 @@
-var eventPlannerApp = angular.module('eventPlanner', ['ngRoute','ngResource', 'firebase']);
+var eventPlannerApp = angular.module('eventPlanner', ['ngRoute','ngResource', 'firebase', 'ngMap']);
 
 eventPlannerApp.config(['$routeProvider',
   function($routeProvider) {
@@ -38,3 +38,7 @@ eventPlannerApp.config(['$routeProvider',
         redirectTo: '/Home'
       });
 }]); 
+
+eventPlannerApp.config(['$qProvider', function ($qProvider) {
+    $qProvider.errorOnUnhandledRejections(false);
+}]);
