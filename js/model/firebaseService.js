@@ -21,7 +21,7 @@ eventPlannerApp.factory('firebaseService', function($firebaseObject, $firebaseAr
                 .child(firebase.auth().currentUser.uid);
             return ref;
         },
-        getEvents: function(){
+        getEvents: function(orderBy){
             //Database name: events
             var ref = firebase.database().ref("events");
             var uid = firebase.auth().currentUser.uid;

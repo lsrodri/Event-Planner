@@ -14,14 +14,6 @@ eventPlannerApp.controller('sidebarCtrl', function ($scope,$routeParams, firebas
 	}
 
 	//Checking on authentication
-	
-	/*firebase.auth().onAuthStateChanged(function(user) {
-		if (user) {
-			$scope.myEvents = firebaseService.getEvents();
-		}
-	});*/
-
-	//Checking on authentication
 	firebaseService.checkAuth(function(){
 		//Assigning the firebase object to myEvents
 		$scope.myEvents = firebaseService.getEvents();
