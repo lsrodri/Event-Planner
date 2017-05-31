@@ -1,10 +1,11 @@
-eventPlannerApp.controller('homeCtrl', function ($scope, $routeParams, $window, facebookService, eventService, geolocationService, firebaseService, alertService) {
+eventPlannerApp.controller('homeCtrl', function ($scope, $routeParams, $window, facebookService, eventService, geolocationService, firebaseService, alertService, NgMap) {
 
 	//Default setting is to have a distance of 5km, no date selection, and order results by time
 	$scope.sort = "time";
 	$scope.dateSelection = "";
 	$scope.distance = 5;
 	$scope.loading = true;
+	$scope.viewmode = 'map';
 
 	//Checking on authentication
 	firebaseService.checkAuth(function(){
@@ -55,6 +56,8 @@ eventPlannerApp.controller('homeCtrl', function ($scope, $routeParams, $window, 
 		longitude: null
 	}
 	
+
+
 	//Checking whether user is logged in / signed up
 	facebookService.getToken().then(function(token){
 
@@ -64,6 +67,9 @@ eventPlannerApp.controller('homeCtrl', function ($scope, $routeParams, $window, 
 			//Setting the global coords object
 			coords.latitude = coordinates.coords.latitude;
 			coords.longitude = coordinates.coords.longitude;
+
+			$scope.userLatitude = coords.latitude;
+			$scope.userLongitude = coords.longitude;
 
 			//By default, getting events that are 1km from the user and sorting them by time
 			$scope.events = eventService.get({
@@ -121,6 +127,7 @@ eventPlannerApp.controller('homeCtrl', function ($scope, $routeParams, $window, 
 			}, function(){
 				//success function
 				$scope.loading = false;
+
 			}, function(error){
 				//error function
 		  		alertService.add("alert-warning", "Unable to fetch events. Please check your internet connection.");
